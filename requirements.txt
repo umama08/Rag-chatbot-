@@ -1,0 +1,21 @@
+# ── Web framework & server ───────────────────────────────────────────────────
+fastapi==0.141.1          # app.py  – FastAPI, HTTPException, CORSMiddleware
+uvicorn==0.53.0           # app.py  – ASGI server (used in __main__ block)
+pydantic==2.13.5          # app.py  – BaseModel for request schema
+
+# ── Database ─────────────────────────────────────────────────────────────────
+psycopg2-binary==2.9.13   # app.py, embed_and_index.py – PostgreSQL adapter
+pgvector==0.5.0           # app.py, embed_and_index.py – pgvector.psycopg2
+
+# ── Embeddings ───────────────────────────────────────────────────────────────
+sentence-transformers==6.1.0  # app.py, embed_and_index.py – SentenceTransformer
+
+# ── LLM client ───────────────────────────────────────────────────────────────
+openai==3.16.2            # app.py  – OpenAI client (pointed at Groq base URL)
+
+# ── Web scraping ─────────────────────────────────────────────────────────────
+requests==2.34.2          # scraper.py – HTTP requests
+beautifulsoup4==4.15.0    # scraper.py – HTML parsing (bs4.BeautifulSoup)
+
+# ── Environment / config ──────────────────────────────────────────────────────
+python-dotenv==1.2.3      # app.py, embed_and_index.py – load_dotenv()
